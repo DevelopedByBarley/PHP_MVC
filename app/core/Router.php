@@ -1,5 +1,5 @@
 <?php
-require_once '../app/controllers/Home_Controller.php';
+require './app/controllers/Home_Controller.php';
 
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', [HomeHandler::class, 'getUsers']);

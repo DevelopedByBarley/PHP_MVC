@@ -7,10 +7,12 @@
   SetEnv DB_USER Barley
   SetEnv DB_PASSWORD Csak1enter
   
+
   # Ha a public mappában lévő fájlra érkezett a kérés, szolgáld ki a fájlt
   RewriteCond %{REQUEST_URI} ^.*public/(.*)
-  RewriteRule ^(.*)$ /public/%1 [END]
+  RewriteRule ^(.*)$ public/%1 [END]
 
   # Minden más esetben az index.php-t futtasd le
-  RewriteRule (.*)  /public/index.php [QSA]
+  RewriteRule (.*) index.php [QSA]
+
 </IfModule>

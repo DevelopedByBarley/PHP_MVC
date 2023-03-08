@@ -1,16 +1,14 @@
 <?php
-require '../app/models/Home_Model.php';
+require './app/models/Home_Model.php';
 
 class HomeHandler
 {
     private $homeModel;
     private $mailer;
-    private $XLSX;
     public function __construct()
     {
         $this->homeModel = new HomeModel();
         $this->mailer = new Mailer();
-        $this->XLSX= new XLSX();
 
     }
 
@@ -21,7 +19,7 @@ class HomeHandler
 
 
         echo $renderer->render("Layout.php",[
-            "tests" => $tests
+            "content" => $renderer->render("/pages/Content.php", [])
         ]);
     }
 
