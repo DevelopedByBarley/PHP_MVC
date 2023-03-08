@@ -12,20 +12,15 @@
 </head>
 
 <body>
+    <?php include 'includes/Header.php' ?>
     <div class="container">
         <div class="row">
-            <div class="col p-5 bg-dark">
-                <h1 class="greetings text-center mt-5 text-light">
-                   Welcome to MVC MODEL 1.0.0
-                </h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
+            <div class="col d-flex align-items-center justify-content-center flex-column" style="min-height: 79vh">
                 <?= $params["content"] ?? "" ?>
             </div>
         </div>
     </div>
+    <?php include 'includes/Footer.php' ?>
 </body>
 
 </html>
