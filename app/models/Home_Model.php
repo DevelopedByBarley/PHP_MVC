@@ -1,4 +1,5 @@
 <?php
+
     class HomeModel{
 
         private $pdo;
@@ -10,6 +11,7 @@
         }
 
         public function Test() {
+
             $stmt = $this->pdo->prepare("SELECT * FROM `users`");
             $stmt->execute();
             $tests = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,4 +25,3 @@
         }
 
     }
-?>

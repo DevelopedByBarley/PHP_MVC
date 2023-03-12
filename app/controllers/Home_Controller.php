@@ -17,7 +17,6 @@ class HomeHandler
         $tests = $this->homeModel->Test();
         $renderer = new Renderer(); 
 
-
         echo $renderer->render("Layout.php",[
             "content" => $renderer->render("/pages/Content.php", [])
         ]);
