@@ -15,14 +15,13 @@ class FileSaver
   public function saver($files, $path, $prevImages)
   {
 
-    $this->unlinkPrevImages($prevImages,$path);
+    $this->unlinkPrevImages($prevImages, $path);
 
     if (empty($files["name"])) return false;;
     if (is_array($files["name"])) {
-      $this->saveMultipleFiles($files, $path);
-      return;
+      return $this->saveMultipleFiles($files, $path);
     }
-    $this->save($files, $path);
+    return $this->save($files, $path);
   }
 
   private function saveMultipleFiles($files, $path)
@@ -57,10 +56,11 @@ class FileSaver
     return $originalFileName;
   }
 
-  private function unlinkPrevImages($prevImages,$path) {
+  private function unlinkPrevImages($prevImages, $path)
+  {
     if (isset($prevImages)) {
-      if(is_array($prevImages)){
-        foreach($prevImages as $images) {
+      if (is_array($prevImages)) {
+        foreach ($prevImages as $images) {
           var_dump($images);
           unlink("./public/images/$path/" . $images);
         }
