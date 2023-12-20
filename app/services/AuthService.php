@@ -35,8 +35,6 @@ class AuthService
   {
     session_start();
 
-    var_dump($_POST);
-    exit;
     $name = filter_var($body["name"] ?? '', FILTER_SANITIZE_SPECIAL_CHARS);
     $pw = filter_var($body["password"] ?? '', FILTER_SANITIZE_SPECIAL_CHARS);
 
@@ -46,7 +44,10 @@ class AuthService
     $admin = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
+
+
     if (!$admin || count($admin) === 0) {
+
       $this->alert->set('Sikertelen bejelentkezés!', null, null, "danger", "/admin");
       exit;
     }

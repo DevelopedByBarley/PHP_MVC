@@ -10,6 +10,7 @@ class Admin_Render
 
   public function form()
   {
+
     $admin = $_SESSION["adminId"] ?? null;
 
     echo $this->renderer->render("admin/Layout.php", [

@@ -1,9 +1,11 @@
 <?php
-    require 'vendor/autoload.php';
-    require 'config/Database.php';
-    require 'app/helpers/Renderer.php';
-    require 'app/helpers/Mailer.php';
-    require 'app/helpers/ExportXLSX.php';
-    require 'app/helpers/Validate.php';
-    require 'app/core/Router.php';
-?>
+ini_set('display_errors', 1);
+
+
+require_once 'vendor/autoload.php';
+require_once 'config/Database.php';
+require_once 'app/helpers/Renderer.php';
+require_once 'app/helpers/Mailer.php';
+require_once 'app/helpers/ExportXLSX.php';
+require_once 'app/helpers/Validate.php';
+require_once 'app/core/Router.php';

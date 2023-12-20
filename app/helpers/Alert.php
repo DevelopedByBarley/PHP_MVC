@@ -10,8 +10,8 @@ class Alert
     }
 
     $lang = $_COOKIE["lang"] ?? null;
-
-    if ($lang === "Hu") {
+    if ($lang === "Hu" || !$lang  ) {
+    
       $_SESSION["alert"] = [
         "message" => $message,
         "bg" => $bg,

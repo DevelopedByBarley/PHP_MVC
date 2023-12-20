@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <?php include 'components/Navbar.php' ?>
+    <?php include 'app/views/public/components/Alert.php' ?>
+
     <div class="container" style="margin-top: 90px;">
         <div class="row">
             <div class="col d-flex align-items-center justify-content-center flex-column" style="min-height: 79vh">

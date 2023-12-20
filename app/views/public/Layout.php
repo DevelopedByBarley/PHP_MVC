@@ -13,8 +13,9 @@
 
 <body>
     <?php include 'components/Navbar.php' ?>
+    <?php include 'app/views/public/components/Alert.php' ?>
     <?= $params["content"] ?? "" ?>
 
 </body>
-
+ 
 </html>

@@ -1,5 +1,9 @@
 <?php
+ if (session_id() == '') {
+  session_start();
+}
 $alert = $_SESSION["alert"] ?? null;
+
 ?>
 
 <?php if (isset($alert)) : ?>
