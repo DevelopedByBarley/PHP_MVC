@@ -11,11 +11,11 @@ class Mailer
             $mail = new PHPMailer();
             $mail->isSMTP();
             //$mail->SMTPDebug = 3;
-            $mail->setFrom("underdev@bybarley.hu", "VAP");
+            $mail->setFrom("", "");
             $mail->addAddress($address);
-            $mail->Username = "underdev@bybarley.hu";
-            $mail->Password = "j6pH&+rE-4W4l@AcH1zl";
-            $mail->Host = "smtp.rackhost.hu";
+            $mail->Username = "";
+            $mail->Password = "";
+            $mail->Host = "";
             $mail->CharSet = 'UTF-8';
             $mail->Subject = $subject;
             $mail->Body = $body;

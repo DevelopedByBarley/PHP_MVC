@@ -13,13 +13,8 @@
 
 <body>
     <?php include 'components/Navbar.php' ?>
-    <div class="container" style="margin-top: 90px;">
-        <div class="row">
-            <div class="col d-flex align-items-center justify-content-center flex-column" style="min-height: 79vh">
-                <?= $params["content"] ?? "" ?>
-            </div>
-        </div>
-    </div>
+    <?= $params["content"] ?? "" ?>
+
 </body>
 
 </html>
