@@ -7,7 +7,7 @@ class Home_Render
     $renderer = new Renderer();
 
     echo $renderer->render("public/Layout.php", [
-      "content" => $renderer->render("public/pages/Content.php", [])
+      "content" => $renderer->render("public/pages/Main.php", [])
     ]);
   }
   public function error()

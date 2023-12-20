@@ -28,4 +28,8 @@ class Admin_Controller
   {
     $this->LoginChecker->checkUserIsLoggedInOrRedirect('adminId', '/admin');
   }
+
+  public function logout() {
+    $this->AuthService->logoutAdmin();
+  }
 }

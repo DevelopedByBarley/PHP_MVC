@@ -1,23 +1,24 @@
 <?php
     class LoginChecker
     {
-        private function isLoggedIn()
+        private function isLoggedIn($entity)
         {
             if (!isset($_COOKIE[session_name()])) return false;
             if (session_id() == '') {
                 session_start();
             }
-            if (!isset($_SESSION["userId"])) return false;
-            return true;
+            if (!isset($_SESSION[$entity])) return false;
+            return $_SESSION[$entity];
         }
     
     
-        public function checkUserIsLoggedInOrRedirect()
+        public function checkUserIsLoggedInOrRedirect($entity, $redirect)
         {
-            if ($this->isLoggedIn()) {
-                return;
+            if (self::isLoggedIn($entity)) {
+                return self::isLoggedIn($entity);
             };
-            header("Location: /");
+
+            header("Location: $redirect");
             exit;
         }
     }
