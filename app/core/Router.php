@@ -1,8 +1,9 @@
 <?php
 
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
-    require_once 'app/routes/protected/admin/admin_routes.php';
-    require_once 'app/routes/public/home/home_routes.php';
+    require_once 'app/routes/protected/admin_routes.php';
+    require_once 'app/routes/public/home_routes.php';
+    require_once 'app/routes/public/user_routes.php';
 });
 
 // Fetch method and URI from somewhere
