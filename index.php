@@ -2,6 +2,7 @@
 ini_set('display_errors', 1);
 
 
+require_once 'config/Langs/Langs.php';
 require_once 'vendor/autoload.php';
 require_once 'config/Database.php';
 require_once 'app/helpers/Renderer.php';
